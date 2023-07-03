@@ -5,6 +5,7 @@
   position: fixed;
   width: 100vw;
   background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(32, 32, 32, 0) 100%);
+  z-index: 1;
 
   &__container {
     max-width: 114rem;
