@@ -1,3 +1,37 @@
 .footer {
-  
+  color: #eee;
+  background-color: #202020;
+
+  &__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__brand {
+      max-width: 200px;
+    }
+
+    &__links {
+      display: flex;
+
+      &>ul>li {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &>.copyright {
+    background-color: #303030;
+    padding: 1rem;
+
+    &>p {
+      text-align: center;
+
+      &>a {
+        color: #eee
+      }
+    }
+  }
 }
