@@ -5,6 +5,7 @@ import HomePage from "./pages/Home/HomePage";
 import MenuPage from "./pages/Menu/MenuPage";
 import ReservationPage from "./pages/Reservation/ReservationPage";
 import ContactPage from "./pages/Contact/ContactPage";
+import AuthPage from "./pages/Auth/AuthPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path='/menu' element={<MenuPage />} />
         <Route exact path='/reservation' element={<ReservationPage />} />
         <Route exact path='/contact' element={<ContactPage />} />
+        <Route exact path='/auth' element={<AuthPage />} />
       </Routes>
       <Footer />
     </Router>

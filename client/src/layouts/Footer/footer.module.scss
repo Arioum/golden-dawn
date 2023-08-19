@@ -7,6 +7,7 @@
     margin: 0 auto;
     padding: 2rem 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     &__brand {
@@ -15,22 +16,33 @@
 
     &__links {
       display: flex;
+      gap: 5em;
 
-      &>ul>li {
+      & > ul > li {
         font-size: 1.6rem;
+      }
+    }
+
+    &__newsletter {
+      &__inputCont {
+        & > input[type="email"] {
+          padding: 1em;
+          outline: none;
+          border: none;
+        }
       }
     }
   }
 
-  &>.copyright {
+  & > .copyright {
     background-color: #303030;
     padding: 1rem;
 
-    &>p {
+    & > p {
       text-align: center;
 
-      &>a {
-        color: #eee
+      & > a {
+        color: #eee;
       }
     }
   }

@@ -1,11 +1,12 @@
-import classes from './header.module.scss';
+import classes from "./header.module.scss";
 
-const HeaderLayout = ({ name }) => {
+const HeaderLayout = ({ title, subTitle }) => {
   return (
     <header className={classes.header}>
-      <h1>{name}</h1>
+      <h1>{title}</h1>
+      {subTitle && <h2>{subTitle}</h2>}
     </header>
-  )
-}
+  );
+};
 
-export default HeaderLayout
+export default HeaderLayout;

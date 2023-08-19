@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Button from '../../components/Button/Button'
-import Logo from '/assets/logo.svg'
+import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
+import Logo from "/assets/logo.svg";
 // import { PiInstagramLogoFill } from 'react-icons/pi'
 import classes from "./footer.module.scss";
 
@@ -12,8 +12,11 @@ const Footer = () => {
       <div className={classes.footer__container}>
         <div className={classes.footer__container__brand}>
           <img src={Logo} alt='Golder Dawn Logo' width={200} />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo debitis eligendi doloribus ea fuga voluptate labore et! Esse.</p>
-          <div className="">
+          <p>
+            Golden Dawn restaurants and chain is Evankhell's most revered brand
+            of establishments which is known for its fine dining experience
+          </p>
+          <div className=''>
             {/* <img src={PiInstagramLogoFill} alt="ds" /> */}
           </div>
         </div>
@@ -26,24 +29,35 @@ const Footer = () => {
             <li>Contact Us</li>
           </ul>
           <ul>
-            <li></li>
-            <li>sdd</li>
-            <li></li>
+            <li>Careers</li>
+            <li>Testimonials</li>
+            <li>Reviews</li>
+          </ul>
+          <ul>
+            <li>Privacy policy</li>
+            <li>Terms & Conditions</li>
+            <li>Legal</li>
           </ul>
         </div>
         <div className={classes.footer__container__newsletter}>
           <h4>Subscribe to our Newsletter</h4>
-          <div className="">
-            <input type="email" placeholder='Enter your email'/>
-            <Button type={"button"} width={100}>Subscribe</Button>
+          <div className={classes.footer__container__newsletter__inputCont}>
+            <input type='email' placeholder='Enter your email' />
+            <Button type={"button"} width={150} height={50} borderRadius={0}>
+              Subscribe
+            </Button>
           </div>
         </div>
       </div>
       <div className={classes.copyright}>
-        <p>©{year} Designed and developed by <Link to='https://github.com/arioum'>Arioum</Link>. All rights reserved.</p>
+        <p>
+          ©{year} Designed and developed by{" "}
+          <Link to='https://github.com/arioum'>Arioum</Link>. All rights
+          reserved.
+        </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,11 +1,11 @@
-import HeaderLayout from "../../layouts/Header/HeaderLayout"
+import HeaderLayout from "../../layouts/Header/HeaderLayout";
 
 const ContactPage = () => {
   return (
     <>
-      <HeaderLayout name={"Menu"} />
+      <HeaderLayout title={"Contact Us"} />
     </>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

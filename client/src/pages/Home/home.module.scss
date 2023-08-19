@@ -4,10 +4,15 @@
   &__sectionHero {
     max-width: 100vw;
     height: 600px;
-    background-image: linear-gradient(to left bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.99)), url(../../images/banner.jpg);
+    background-image: linear-gradient(
+        to left bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.99)
+      ),
+      url(../../images/banner.jpg);
     background-size: cover;
     background-position: center;
-    
+
     &__group {
       max-width: 1140px;
       height: 100%;
@@ -15,6 +20,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      & > div {
+        display: inherit;
+        flex-direction: column;
+        gap: 2em;
+      }
     }
   }
 
@@ -23,4 +34,8 @@
     font-weight: 700;
   }
 
+  &__ctaBox {
+    display: flex;
+    gap: 2em;
+  }
 }

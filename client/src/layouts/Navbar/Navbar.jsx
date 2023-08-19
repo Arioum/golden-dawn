@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../sass/main.scss';
 import classes from "./navbar.module.scss"
+import UserAction from '../../components/UserAccount/UserAction';
 
 const Navbar = () => {
   return (
@@ -16,6 +17,7 @@ const Navbar = () => {
             <li className={classes.navbar__itemLink}><Link to="/menu">Menu</Link></li>
             <li className={classes.navbar__itemLink}><Link to="/reservation">Reservation</Link></li>
             <li className={classes.navbar__itemLink}><Link to="/contact">Contact</Link></li>
+            <UserAction/>
           </ul>
         </div>
       </div>

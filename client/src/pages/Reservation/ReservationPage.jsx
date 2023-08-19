@@ -3,7 +3,7 @@ import HeaderLayout from "../../layouts/Header/HeaderLayout"
 const ReservationPage = () => {
   return (
     <>
-      <HeaderLayout name={"Reservations"} />
+      <HeaderLayout title={"Reservations"} />
       <div className="">hi</div>
     </>
   )
