@@ -9,4 +9,11 @@ const getMenuItems = async (req, res) => {
   }
 };
 
+const addNewMenuItem = async (req, res) => {
+  try {
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+
 module.exports = getMenuItems;
