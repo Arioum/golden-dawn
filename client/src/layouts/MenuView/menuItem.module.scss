@@ -1,0 +1,29 @@
+.menuItem {
+  border: 1px solid #000;
+  display: grid;
+  height: fit-content;
+  padding: 1em;
+  grid-template-columns: 5fr 1fr;
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      max-width: 400px;
+    }
+  }
+
+  &__image {
+    border: 2px solid #bdbdbd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 3em;
+    height: 140px;
+    width: 140px;
+
+    & > img {
+      width: 140px;
+    }
+  }
+}
