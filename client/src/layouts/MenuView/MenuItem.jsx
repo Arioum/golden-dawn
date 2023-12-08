@@ -36,6 +36,11 @@ const MenuItem = ({ menuItem }) => {
             <p>No image available</p>
           )}
         </section>
+        <div className={classes.menuItem__addItem}>
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
       </article>
     </>
   );
