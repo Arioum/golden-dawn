@@ -26,4 +26,21 @@
       width: 140px;
     }
   }
+
+  &__addItem {
+    border: 1px solid #000;
+
+    & > button {
+      background-color: #f0a819;
+      border: none;
+      width: 30px;
+      height: 30px;
+      font-weight: 600;
+    }
+
+    & > span {
+      font-size: 1.6rem;
+      padding: 0 1em;
+    }
+  }
 }
