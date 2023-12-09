@@ -1,0 +1,37 @@
+.cartOverlay {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  
+  &__contents {
+    background-color: #fff;
+    border: 2px solid #dcdcdc;
+    box-shadow: 0 0 1em 1px #dbdbdb;
+    height: 80px;
+    border-radius: 16px;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+
+  }
+
+  &__right {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    line-height: 1.6;
+
+    &__clearItemBtn {
+      background-color: #000;
+      height: 60px;
+      width: 60px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
