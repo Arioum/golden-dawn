@@ -3,6 +3,7 @@ import axios from 'axios';
 import HeaderLayout from '../../layouts/Header/HeaderLayout';
 import MenuView from '../../layouts/MenuView/MenuView';
 import classes from './menuPage.module.scss';
+import CartOverlay from '../../layouts/CartOverlay/CartOverlay';
 
 const MenuPage = () => {
   const [menuItems, setMenuItems] = useState(null);
@@ -32,6 +33,7 @@ const MenuPage = () => {
           <p className={classes.menuMain__loading}>Loading Menu...</p>
         )}
       </main>
+      <CartOverlay />
     </>
   );
 };

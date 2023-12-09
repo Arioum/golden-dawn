@@ -3,7 +3,6 @@ import MenuSidebar from './MenuSidebar';
 import classes from './menuView.module.scss';
 
 const MenuView = ({ menuItems }) => {
-  
   return (
     <>
       <section className={classes.menuViewContainer}>
