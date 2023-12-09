@@ -27,20 +27,22 @@ const MenuItem = ({ menuItem }) => {
             <p>TotalOrdered: {totalOrdered}</p>
           </div>
         </section>
-        <section className={classes.menuItem__image}>
-          {images && images.length > 0 ? (
-            images.map((img, index) => (
-              <img key={index} src={img.url} alt={`Image ${index}`} />
-            ))
-          ) : (
-            <p>No image available</p>
-          )}
+        <section className={classes.menuItem__action}>
+          <section className={classes.menuItem__action__image}>
+            {images && images.length > 0 ? (
+              images.map((img, index) => (
+                <img key={index} src={img.url} alt={`Image ${index}`} />
+              ))
+            ) : (
+              <p>No image available</p>
+            )}
+          </section>
+          <div className={classes.menuItem__action__addItem}>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+          </div>
         </section>
-        <div className={classes.menuItem__addItem}>
-          <button>-</button>
-          <span>0</span>
-          <button>+</button>
-        </div>
       </article>
     </>
   );
