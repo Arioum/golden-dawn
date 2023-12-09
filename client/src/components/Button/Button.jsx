@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import classes from "./button.module.scss";
 
-const Button = ({ type, width, fontSize, borderRadius, height, dest, children }) => {
+const Button = ({ type, width, fontSize, bgColor, borderRadius, height, dest, children }) => {
   const btnStyle = {
-    backgroundColor: "#f0a819",
+    backgroundColor:  bgColor || "#f0a819",
     padding: ".8em 2em",
     fontSize: fontSize || "1.6rem",
     fontWeight: "700",
@@ -20,7 +20,7 @@ const Button = ({ type, width, fontSize, borderRadius, height, dest, children })
     );
   }
   return (
-    <button style={btnStyle} className={classes.button}>
+    <button className={classes.button} style={btnStyle}>
       {children}
     </button>
   );
