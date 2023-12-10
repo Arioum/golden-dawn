@@ -7,10 +7,13 @@ const MenuView = ({ menuItems }) => {
     <>
       <section className={classes.menuViewContainer}>
         <MenuSidebar />
-        <div className=''>
+        <div className={classes.menuItemsView}>
           {menuItems.map((category, index) => (
             <>
-              <h2 key={index}>{category._id}</h2>
+              <h2 key={index} className={classes.menuItemsView__categoryHeaders}>
+                {category._id}
+              </h2>
+              <hr />
               {category.items.map((item, index) => (
                 <MenuItem key={index} menuItem={item} />
               ))}
