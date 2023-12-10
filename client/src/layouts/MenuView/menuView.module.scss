@@ -9,24 +9,9 @@
   border: 1px solid #c9c9c9;
 }
 
-// .box-cont {
-//   display: grid;
-//   gap: 1rem;
-//   grid-template-columns: 1fr 3fr 4fr 1fr;
-// }
+.menuItemsView {
 
-// .box {
-//   border-radius: 10px;
-//   min-height: 200px;
-//   min-width: 200px;
-//   background-color: black;
-//   color: aliceblue;
-//   font-size: 40px;
-// }
-
-// .b3 {
-//   grid-column-start: 1;
-//   grid-column-end: 3;
-//   grid-row-start: 2;
-//   grid-row-end: 4;
-// }
+  &__categoryHeaders {
+    font-size: 2.4rem;
+  }
+}

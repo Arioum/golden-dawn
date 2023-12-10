@@ -12,16 +12,16 @@ const getMenuItems = async (req, res) => {
       },
     ]);
 
-    const categories = ['Beverages', 'Biriyani'];
+    // const categories = ['Starters', 'Rice Preparation','Beverages', 'Biriyani'];
 
-    const groupedByCategory = categories.map((category) => {
-      const categoryResult = menuItems.find(
-        (item) => item._id === category
-      ) || { items: [] };
-      return { [category]: categoryResult.items };
-    });
+    // const groupedByCategory = categories.map((category) => {
+    //   const categoryResult = menuItems.find(
+    //     (item) => item._id === category
+    //   ) || { items: [] };
+    //   return { [category]: categoryResult.items };
+    // });
 
-    res.status(200).json(groupedByCategory);
+    res.status(200).json(menuItems);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
