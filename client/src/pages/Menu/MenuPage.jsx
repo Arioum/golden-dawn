@@ -9,6 +9,7 @@ const MenuPage = () => {
   const [menuItems, setMenuItems] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchMenuItems = async () => {
       axios
         .get('http://localhost:4000/getMenuItems')
