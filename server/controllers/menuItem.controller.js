@@ -3,15 +3,32 @@ const MenuItems = require('../models/menuItem.model');
 
 const getMenuItems = async (req, res) => {
   try {
-    const menuItems = await MenuItems.find();
-    res.status(200).json(menuItems);
+    const menuItems = await MenuItems.aggregate([
+      {
+        $group: {
+          _id: '$category',
+          items: { $push: '$$ROOT' },
+        },
+      },
+    ]);
+
+    const categories = ['Beverages', 'Biriyani'];
+
+    const groupedByCategory = categories.map((category) => {
+      const categoryResult = menuItems.find(
+        (item) => item._id === category
+      ) || { items: [] };
+      return { [category]: categoryResult.items };
+    });
+
+    res.status(200).json(groupedByCategory);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
 };
 
 const addNewMenuItem = async (req, res) => {
-  const { itemName, price, discount, description, category, tags } = req.body
+  const { itemName, price, discount, description, category, tags } = req.body;
 
   if (!req.files || req.files.length === 0) {
     return res.status(400).json({ message: 'No files uploaded' });
