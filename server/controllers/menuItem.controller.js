@@ -7,21 +7,38 @@ const getMenuItems = async (req, res) => {
       {
         $group: {
           _id: '$category',
+          itemsCount: { $count: {} },
           items: { $push: '$$ROOT' },
         },
       },
     ]);
 
-    // const categories = ['Starters', 'Rice Preparation','Beverages', 'Biriyani'];
+    const categories = [
+      'Starters',
+      'Rice Preparation',
+      'Biriyani',
+      'Bread',
+      'Main Course',
+      "Pizza's and Pasta",
+      'Dessert',
+      'Ice creams',
+      'Beverages',
+    ];
 
+    const customSort = (a, b) => {
+      const indexA = categories.indexOf(a._id);
+      const indexB = categories.indexOf(b._id);
+      return indexA - indexB;
+    };
+
+    const sortedMenuData = menuItems.sort(customSort);
     // const groupedByCategory = categories.map((category) => {
     //   const categoryResult = menuItems.find(
     //     (item) => item._id === category
     //   ) || { items: [] };
     //   return { [category]: categoryResult.items };
     // });
-
-    res.status(200).json(menuItems);
+    res.status(200).json(sortedMenuData);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
