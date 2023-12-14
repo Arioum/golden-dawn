@@ -5,12 +5,37 @@
 }
 
 .menuSidebar {
-  width: 300px;
+  width: 260px;
   border: 1px solid #c9c9c9;
+  border-radius: 15px;
+
+  & > ul {
+    padding: 0.5em;
+
+    & > li > button {
+      width: 100%;
+      border-radius: 10px;
+      background: none;
+      border: none;
+      padding: 1em 1.6em;
+      font-size: 1.4rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: #f0a819;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .menuItemsView {
-
+  &__sortAndFilter {
+    // border: 1px solid #c9c9c9;
+    padding: 1.2em 0;
+  }
   &__categoryHeaders {
     font-size: 2.4rem;
   }
