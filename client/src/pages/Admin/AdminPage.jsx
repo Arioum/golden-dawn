@@ -46,7 +46,7 @@ const AdminPage = () => {
         formData.append(key, value);
       }
     });
-    console.log(formData);
+    
     axios
       .post('http://localhost:4000/createItem', formData, {
         headers: {
