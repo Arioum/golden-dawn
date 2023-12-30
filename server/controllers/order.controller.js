@@ -1,4 +1,4 @@
-const Order = require("../models/order.model");
+const Order = require('../models/order.model');
 
 const findOrders = async (req, res) => {
   try {
@@ -9,4 +9,4 @@ const findOrders = async (req, res) => {
   }
 };
 
-module.exports = findOrders;
+module.exports = { findOrders };

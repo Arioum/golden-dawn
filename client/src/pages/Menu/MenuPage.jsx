@@ -18,7 +18,7 @@ const MenuPage = () => {
     };
     fetchMenuItems();
   }, []);
-
+  
   {
     /* {item.images.map((img) => (
     <img src={item.images[0].url} alt='No image' width={300} />

@@ -32,12 +32,6 @@ const getMenuItems = async (req, res) => {
     };
 
     const sortedMenuData = menuItems.sort(customSort);
-    // const groupedByCategory = categories.map((category) => {
-    //   const categoryResult = menuItems.find(
-    //     (item) => item._id === category
-    //   ) || { items: [] };
-    //   return { [category]: categoryResult.items };
-    // });
     res.status(200).json(sortedMenuData);
   } catch (error) {
     res.status(404).json({ message: error.message });
@@ -45,21 +39,15 @@ const getMenuItems = async (req, res) => {
 };
 
 const addNewMenuItem = async (req, res) => {
-  const { itemName, price, discount, description, category, tags } = req.body;
-
-  if (!req.files || req.files.length === 0) {
-    return res.status(400).json({ message: 'No files uploaded' });
-  }
-
-  const images = req.files.map((file) => ({
-    url: `data:${file.mimetype};base64,${file.buffer.toString('base64')}`,
-  }));
-
+  const { itemName, price, discount, description, isVegan, category, tags } = req.body;
+  const images = req.images;
+  
   const newMenuItemObj = new MenuItem({
     itemName,
     price,
     discount,
     description,
+    isVegan,
     images,
     category,
     tags,

@@ -9,6 +9,7 @@ const AdminPage = () => {
     price: 0,
     discount: 0,
     description: '',
+    isVegan: null,
     images: [],
     ratings: 0,
     totalOrdered: 0,
@@ -18,12 +19,17 @@ const AdminPage = () => {
 
   function onFormChange(e) {
     const { value, name } = e.target;
-
+    console.log(value);
     if (name === 'images') {
       const files = Array.from(e.target.files);
       setMenuItem((prev) => ({
         ...prev,
         [name]: files,
+      }));
+    } else if (name === 'isVegan') {
+      setMenuItem((prev) => ({
+        ...prev,
+        [name]: value === 'veg' ? true : false,
       }));
     } else {
       setMenuItem((prev) => ({
@@ -46,7 +52,7 @@ const AdminPage = () => {
         formData.append(key, value);
       }
     });
-    console.log(formData);
+
     axios
       .post('http://localhost:4000/createItem', formData, {
         headers: {
@@ -101,6 +107,13 @@ const AdminPage = () => {
             value={menuItem.description}
             onChange={(e) => onFormChange(e)}
           />
+        </div>
+        <div className=''>
+          <label htmlFor=''>Veg or Non Veg</label>
+          <select name='isVegan' id='' onChange={(e) => onFormChange(e)}>
+            <option value='veg'>Vegetarian</option>
+            <option value='non-veg'>Non-Veg</option>
+          </select>
         </div>
         <div className=''>
           <label htmlFor=''>Images</label>
