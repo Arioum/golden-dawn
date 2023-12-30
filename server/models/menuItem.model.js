@@ -5,6 +5,7 @@ const MenuItemSchema = mongoose.Schema({
   price: Number,
   discount: Number,
   description: String,
+  isVegan: Boolean,
   images: [{ url: String }],
   ratings: Number,
   totalOrdered: Number,
